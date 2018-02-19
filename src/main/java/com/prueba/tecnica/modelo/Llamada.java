@@ -6,7 +6,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.prueba.tecnica.enumerador.EstadoEmpleado;
-import com.prueba.tecnica.utilidad.Utilidad;
+import com.prueba.tecnica.utilidad.Utilidades;
 
 public class Llamada implements Runnable {
 	private long id;
@@ -17,6 +17,7 @@ public class Llamada implements Runnable {
 	private static final Logger logger = LogManager.getLogger("com.prueba.tecnica.model.Llamada");
 
 	// -------------- Constructores --------------
+	
 	public Llamada(long id, Empleado empleado, Cliente cliente) {
 		this.id = id;
 		this.empleado = empleado;
@@ -25,14 +26,14 @@ public class Llamada implements Runnable {
 
 	@Override
 	public void run() {
-		this.duracion = Utilidad.random(20, 60) * 1000;
+		this.duracion = Utilidades.random(5, 10) * 1000;
 		this.fecha = new Date().getTime();
 		try {
-			logger.info("inicio: " + toString());
+			logger.info("Inicio: " + toString());
 			Thread.sleep(this.duracion);
-			logger.info("fin: " + toString());
+			logger.info("Fin: " + toString());
 			empleado.setEstado(EstadoEmpleado.DISPONIBLE);
-		} catch (InterruptedException e) {
+		} catch (Exception e) {
 			logger.error(e);
 		}
 	}

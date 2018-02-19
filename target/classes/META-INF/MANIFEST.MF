@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Implementation-Title: pruebaTecnica-1
 Implementation-Version: 0.0.1-SNAPSHOT
-Built-By: Windows 10
+Built-By: T14927
 Implementation-Vendor-Id: com.prueba.tecnica
-Build-Jdk: 1.8.0_161
+Build-Jdk: 1.8.0_131
 Implementation-URL: http://projects.spring.io/spring-boot/spring-boot-
  starter-parent/pruebaTecnica-1/
 Created-By: Maven Integration for Eclipse

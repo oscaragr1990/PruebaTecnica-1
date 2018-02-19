@@ -18,13 +18,14 @@ public class CallCenter {
 	// -------------- Constructores --------------
 
 	public CallCenter() {
-		clienteEnEspera = new ArrayList<Cliente>();
+		clienteEnEspera = new ArrayList<>();
 		empleados = new HashMap<Rol, List<Empleado>>();
 	}
 
 	// -------------- Logica --------------
 
 	/**
+	 * Método que permite obtener un empleado disponible, según la regla definida.
 	 * 
 	 * @return
 	 */
@@ -32,7 +33,7 @@ public class CallCenter {
 		Empleado empleado = null;
 		List<Empleado> listaEmpleados = obtenerEmpleadoEstado(EstadoEmpleado.DISPONIBLE);
 
-		if (listaEmpleados != null && listaEmpleados.size() > 0) {
+		if (listaEmpleados != null && !listaEmpleados.isEmpty()) {
 			empleado = listaEmpleados.stream().filter(e -> e.getRol() == Rol.OPERADOR).findAny().orElse(null);
 
 			if (empleado == null) {
@@ -50,6 +51,12 @@ public class CallCenter {
 		return empleado;
 	}
 
+	/**
+	 * Método que permite cambiar el estado de un empleado.
+	 * 
+	 * @param empleado
+	 * @param estado
+	 */
 	public void cambiarEstadoEmpleado(Empleado empleado, EstadoEmpleado estado) {
 		empleado.setEstado(estado);
 		List<Empleado> lista = this.empleados.get(empleado.getRol());
@@ -58,6 +65,7 @@ public class CallCenter {
 	}
 
 	/**
+	 * Obtiene los empleados que estén con un estado específico.
 	 * 
 	 * @param estado
 	 * @return
@@ -68,6 +76,8 @@ public class CallCenter {
 	}
 
 	/**
+	 * Método que permite el registro de un nuevo empleado, a la lista de espera
+	 * para su asignación
 	 * 
 	 * @param empleado
 	 */
@@ -82,8 +92,8 @@ public class CallCenter {
 			listaEmpleado.add(empleado);
 			empleados.put(empleado.getRol(), listaEmpleado);
 		}
-
 	}
+
 	// -------------- Gets y Sets --------------
 
 	/**
@@ -158,9 +168,7 @@ public class CallCenter {
 		if (getClass() != obj.getClass())
 			return false;
 		CallCenter other = (CallCenter) obj;
-		if (id != other.id)
-			return false;
-		return true;
+		return id == other.id;
 	}
 
 }

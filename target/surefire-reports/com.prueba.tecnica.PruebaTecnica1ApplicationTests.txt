@@ -1,4 +1,7 @@
 -------------------------------------------------------------------------------
 Test set: com.prueba.tecnica.PruebaTecnica1ApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.81 s - in com.prueba.tecnica.PruebaTecnica1ApplicationTests
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.736 s <<< FAILURE! - in com.prueba.tecnica.PruebaTecnica1ApplicationTests
+initializationError(com.prueba.tecnica.PruebaTecnica1ApplicationTests)  Time elapsed: 0.01 s  <<< ERROR!
+java.lang.IllegalStateException: Unable to find a @SpringBootConfiguration, you need to use @ContextConfiguration or @SpringBootTest(classes=...) with your test
+

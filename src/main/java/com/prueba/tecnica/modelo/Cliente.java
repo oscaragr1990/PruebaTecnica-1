@@ -1,7 +1,7 @@
 package com.prueba.tecnica.modelo;
 
 /**
- * @author Oscar Alejandro G�mez Ram�rez
+ * @author Oscar Alejandro Gómez Ramírez
  *
  */
 public class Cliente {
@@ -74,7 +74,9 @@ public class Cliente {
 		return true;
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see java.lang.Object#toString()
 	 */
 	@Override
