@@ -10,6 +10,12 @@ import java.util.stream.Collectors;
 import com.prueba.tecnica.enumerador.EstadoEmpleado;
 import com.prueba.tecnica.enumerador.Rol;;
 
+/**
+ * Representa el CallCenter
+ * 
+ * @author Oscar Alejandro Gómez Ramírez
+ *
+ */
 public class CallCenter {
 	private long id;
 	private Map<Rol, List<Empleado>> empleados;

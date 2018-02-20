@@ -1,7 +1,9 @@
 package com.prueba.tecnica.enumerador;
 
 /**
- * @author Oscar Alejandro G�mez Ram�rez
+ * Los estado que puede tener los empleados.
+ * 
+ * @author Oscar Alejandro Gómez Ramírez
  *
  */
 public enum EstadoEmpleado {

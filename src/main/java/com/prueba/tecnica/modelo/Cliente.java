@@ -1,6 +1,8 @@
 package com.prueba.tecnica.modelo;
 
 /**
+ * Representa el cliente del CallCenter (Que realiza la llamada)
+ * 
  * @author Oscar Alejandro Gómez Ramírez
  *
  */

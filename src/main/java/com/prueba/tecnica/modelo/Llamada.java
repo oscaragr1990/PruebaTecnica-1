@@ -8,7 +8,14 @@ import org.apache.logging.log4j.Logger;
 import com.prueba.tecnica.enumerador.EstadoEmpleado;
 import com.prueba.tecnica.utilidad.Utilidades;
 
+/**
+ * Representa la llamada que realiza el cliente, y que se asigna a un empleado
+ * 
+ * @author Oscar Alejandro Gómez Ramírez
+ *
+ */
 public class Llamada implements Runnable {
+
 	private long id;
 	private Empleado empleado;
 	private Cliente cliente;
@@ -17,21 +24,30 @@ public class Llamada implements Runnable {
 	private static final Logger logger = LogManager.getLogger("com.prueba.tecnica.model.Llamada");
 
 	// -------------- Constructores --------------
-	
+
+	/**
+	 * 
+	 * @param id
+	 * @param empleado
+	 * @param cliente
+	 */
 	public Llamada(long id, Empleado empleado, Cliente cliente) {
 		this.id = id;
 		this.empleado = empleado;
 		this.cliente = cliente;
+		this.fecha = new Date().getTime();
 	}
 
+	/**
+	 * 
+	 */
 	@Override
 	public void run() {
 		this.duracion = Utilidades.random(5, 10) * 1000;
-		this.fecha = new Date().getTime();
 		try {
-			logger.info("Inicio: " + toString());
+			logger.info("Empieza " + toString());
 			Thread.sleep(this.duracion);
-			logger.info("Fin: " + toString());
+			logger.info("Termina " + toString());
 			empleado.setEstado(EstadoEmpleado.DISPONIBLE);
 		} catch (Exception e) {
 			logger.error(e);

@@ -4,7 +4,9 @@ import com.prueba.tecnica.enumerador.EstadoEmpleado;
 import com.prueba.tecnica.enumerador.Rol;
 
 /**
- * @author Oscar Alejandro G�mez Ram�rez
+ * Representa el empleado a que se le asigna la llamada del cliente.
+ * 
+ * @author Oscar Alejandro Gómez Ramírez
  *
  */
 public class Empleado {
@@ -109,7 +111,9 @@ public class Empleado {
 		return true;
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see java.lang.Object#toString()
 	 */
 	@Override

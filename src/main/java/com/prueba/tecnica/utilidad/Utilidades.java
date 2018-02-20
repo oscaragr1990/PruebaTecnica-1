@@ -8,6 +8,12 @@ import org.apache.logging.log4j.Logger;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+/**
+ * Clases de funciones utilitarias
+ * 
+ * @author Oscar Alejandro Gómez Ramírez
+ *
+ */
 public class Utilidades {
 
 	private static final Logger logger = LogManager.getLogger("com.prueba.tecnica.utilidad.Utilidades");
